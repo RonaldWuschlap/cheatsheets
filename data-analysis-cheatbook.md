@@ -96,6 +96,12 @@ df['year'] = df['date'].dt.year
 df['month'] = df['date'].dt.month
 df.rolling(window=3).mean()     # Moving average
 df.shift(1)                     # Lag/lead values
+january = df[df["timestamp"].dt.month == 1]
+year_2024 = df[df["timestamp"].dt.year == 2024]
+one_day = df.loc["2024-01-05"]
+range_df = df.loc["2024-01-03":"2024-01-07"]
+january = df.loc["2024-01"]
+year_2024 = df.loc["2024"]
 ```
 
 ---
